@@ -1,10 +1,8 @@
-#!/bin/sh
-chmod 777 chnroutes.py
-./chnroutes.py -p openwrt -g 10.214.150.1 -d eth0
-chmod 777 ip-down ip-pre-up
-/etc/ppp/ip-down.d/ip-down
-mkdir /etc/ppp/ip-down.d
-mv ip-down /etc/ppp/ip-down.d/
-mv ip-pre-up /etc/ppp/
-/etc/ppp/ip-pre-up
+#!/bin/bash
+cd ./chnroutes/linux
+../../chnroutes.py -p linux
+cd ../mac
+../../chnroutes.py -p mac
+cd ../windows
+../../chnroutes.py -p windows
 exit 0

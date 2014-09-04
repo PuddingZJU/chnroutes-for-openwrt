@@ -66,13 +66,13 @@ def generate_linux(metric):
 def generate_openwrt(metric,oldgateway,olddev):
     results = fetch_ip_data()
     upscript_header=textwrap.dedent("""\
-    #!/bin/bash
+    #!/bin/sh
     export PATH="/bin:/sbin:/usr/sbin:/usr/bin"  
  
     """)
     
     downscript_header=textwrap.dedent("""\
-    #!/bin/bash
+    #!/bin/sh
     export PATH="/bin:/sbin:/usr/sbin:/usr/bin"
     
     """)
